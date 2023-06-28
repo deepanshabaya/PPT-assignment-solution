@@ -1,0 +1,25 @@
+
+//💡 You have n coins and you want to build a staircase with these coins. The staircase consists of k rows where the ith row has exactly i coins. 
+//The last row of the staircase **may be** incomplete.
+
+//Given the integer n, return *the number of **complete rows** of the staircase you will build*.
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	int n=5;
+	int countStairs=0;
+	for(int i=1;i<=n;i++)
+	{
+	    if(n>=i)
+	    {
+	        countStairs++;
+	        n=n-i;
+	    }
+	    else
+	    break;
+	}
+	System.out.println(countStairs);
+	}
+}
